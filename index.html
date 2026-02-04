@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Inversiones JSHA | Repuestos</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+</head>
+<script src="https://cdn.jsdelivr.net/npm/qrcodejs/qrcode.min.js"></script>
+<script>
+      <div id="qrcode"></div>
+    new QRCode(document.getElementById("qrcode"), {
+        text: "https://tupagina.com",
+        width: 150,
+        height: 150
+    });
+</script>
+
+<body>
+
+<header>
+    <h1>Inversiones JSHA 🚛</h1>
+    <p>Repuestos para tractomulas</p>
+</header>
+
+<nav>
+    <a href="#">Inicio</a>
+    <a href="./contactanos.html" target="_blank">Contáctanos</a>
+</nav>
+
+<div class="layout">
+
+    <!-- BARRA LATERAL IZQUIERDA -->
+    <aside class="sidebar">
+        <img src="./logo-inversionesJSHA.jpeg" alt="Logo Inversiones JSHA">
+        <h2>Inversiones JSHA</h2>
+        <p>
+            Bienvenidos a INVERSIONES JSHA S.A.S
+            aqui puedes encuentrar productos de calidad, precios competitivos
+             y una atención pensada para ti. Nuestro compromiso es brindarte soluciones confiables, procesos 
+             claros y un servicio ágil que te acompañe en cada compra. Explora nuestra tienda y descubre
+              por qué somos tu mejor aliado comercial.
+        </p>
+      
+    </aside>
+
+    <!-- CONTENIDO PRINCIPAL -->
+    <main class="contenido">
+
+        <section class="contenedor">
+            <div class="producto">
+                <h3>Frenos de aire</h3>
+                <p>Máxima seguridad en carretera</p>
+                <div class="precio">$850.000</div>
+                <button onclick="agregar('Frenos de aire', 850000)">
+                    Agregar al carrito
+                </button>
+            </div>
+
+            <div class="producto">
+                <h3>Filtro de aceite</h3>
+                <p>Protección total del motor</p>
+                <div class="precio">$120.000</div>
+                <button onclick="agregar('Filtro de aceite', 120000)">
+                    Agregar al carrito
+                </button>
+            </div>
+
+            <div class="producto">
+                <h3>Suspensión neumática</h3>
+                <p>Estabilidad y confort</p>
+                <div class="precio">$2.500.000</div>
+                <button onclick="agregar('Suspensión neumática', 2500000)">
+                    Agregar al carrito
+                </button>
+            </div>
+        </section>
+
+        <section class="carrito">
+            <h2>🛒 Carrito de compras</h2>
+            <ul id="lista"></ul>
+            <p><strong>Total:</strong> <span id="total">$0</span></p>
+            <button onclick="finalizar()">Finalizar compra</button>
+        </section>
+
+    </main>
+</div>
+
+<footer>
+    <p>© 2026 Inversiones JSHA | Colombia</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
